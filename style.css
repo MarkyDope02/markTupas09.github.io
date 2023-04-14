@@ -1,0 +1,194 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   display: flex;   
+}
+
+
+.box{
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    background: #1f242d;
+    background-repeat: no-repeat;
+    background-size: cover;
+min-height: 100vh;
+  
+}
+
+.detail{
+    text-align: left;
+    margin: 50px;
+}
+a {
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 280px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+a span{
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 8px;
+    z-index: 1;
+}
+a .liquid{
+    position: absolute;
+    top: .80px;
+    left: 0;
+    width: 287px;
+    height: 230px;
+    background: #4973ff ;
+    box-shadow: insert 0 0 50px rgba(0, 0, 0, .5) ;
+    transition: .5s; 
+}
+a .liquid::after,
+a .liquid::before{
+content: '';
+width: 170%;
+height: 250%;
+position: absolute;
+top: 0;
+left: 50%;
+transform: translate(-50%, -75%);
+background: #1f242d;
+}
+a .liquid::before{
+    border-radius: 45%;
+    background: rgba(20, 20, 20, .1);
+    animation: animate 5s linear infinite;
+}
+a .liquid::after{
+    border-radius: 40%;
+    background: rgba(20, 20, 20, .5);
+    animation: animate 10s linear infinite;
+}
+a:hover .liquid{
+    top: -139px;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+
+
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img{
+    width: 250px;
+    height: 260px;
+}
+.detail h1::before{
+   
+    position: absolute;
+    color: #4973ff;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #4973ff;
+    animation: animate 8s linear infinite;
+    }
+    @keyframes animate{
+        0%,10%,100%{
+            width: 0;
+        }
+        70%,90% {
+            width: 100%;
+        }
+    }
+
+  
+.detail{
+    margin-left: 8%;
+    margin-top: 10%;
+} 
+.image{
+    width: 30%;
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.image img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+   
+}
+.image:hover .dp{
+    bottom: 70px;
+}
+.image:hover .effect{
+    bottom: 40px;
+    border-radius: 10px 100px/ 120px;
+    
+}
+.image:hover .dp{
+  left: 45%;
+}
+
+.detail h1{
+    font-size: 80px;
+    color:rgb(84, 156, 214);
+    margin-bottom: 20px;
+    text-shadow: #fff;
+}
+
+.detail p{
+    color:white;
+    line-height: 22px;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+text-align: left;
+font-size: 80px;
+color: #fff;   
+
+}
+
+#Portfolio{
+    background: #1f242d;
+
+}
+#About{
+    background: #1f242d;
+    
+}
+#Contact{
+    background: #1f242d;
+}
+#Services{
+    background: #1f242d; 
+}
